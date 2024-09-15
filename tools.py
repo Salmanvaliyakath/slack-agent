@@ -3,6 +3,7 @@ from langchain.output_parsers import ResponseSchema, StructuredOutputParser
 from langchain import PromptTemplate
 import requests
 from utils import initialise_setup
+import os
 
 from dotenv import load_dotenv
 load_dotenv()
