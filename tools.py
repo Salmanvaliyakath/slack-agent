@@ -18,8 +18,7 @@ def post_on_slack(response: str) -> str:
     """post the entire response json on the slack channel"""
 
     payload = str({"text": response})
-    slack_webHook = 'https://hooks.slack.com/services/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'
-
+    slack_webHook = os.getenv('SLACK_WEBHOOK')
     response = requests.post(slack_webHook, data = payload)
     print(response.text)
     return "response json posted on the slack channel"
