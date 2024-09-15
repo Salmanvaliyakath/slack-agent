@@ -8,7 +8,7 @@ Slack Integration: Automatically posts the extracted answers on Slack.
 FastAPI: Provides an API for interacting with the Slack agent.
 
 # Project Structure
-main.py: Contains the FastAPI application that accepts user inputs and invokes the Slack agent.\n
+main.py: Contains the FastAPI application that accepts user inputs and invokes the Slack agent.< br / >
 agent.py: Defines the Slack agent setup and handles the logic for processing questions and posting answers.
 tools.py: Contains tools for extracting answers from documents and posting results on Slack.
 utils.py: Contains helper functions like initializing the setup and creating/loading the Chroma DB.
