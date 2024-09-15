@@ -17,3 +17,23 @@ utils.py: Contains helper functions like initializing the setup and creating/loa
 Python 3.8+<br/>
 OpenAI API key<br/>
 Slack API token - WebHook Token<br/>
+
+
+# Installation
+Clone the repository:
+
+git clone <repository_url>
+cd <repository_name>
+
+# Install dependencies:
+pip install -r requirements.txt
+
+Set up environment variables: Create a .env file in the project root with the following content:
+
+OPENAI_API_KEY=<your_openai_api_key>
+SLACK_API_TOKEN=<your_slack_token>
+
+# Run the FastAPI app:
+
+uvicorn main:app --reload
+API Endpoints
