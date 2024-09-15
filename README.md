@@ -34,7 +34,7 @@ pip install -r requirements.txt<br/>
 Set up environment variables: Create a .env file in the project root with the following content:<br/>
 
 OPENAI_API_KEY=<your_openai_api_key><br/>
-SLACK_API_TOKEN=<your_slack_token><br/>
+SLACK_WEBHOOK=<your_slack_webhook_url><br/>
 
 # Run the FastAPI app:
 
