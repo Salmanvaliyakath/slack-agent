@@ -30,6 +30,7 @@ cd <repository_name><br/>
 
 # Install dependencies:
 pip install -r requirements.txt<br/>
+Copy the handbook.pdf to this folder<br/>
 
 Set up environment variables: Create a .env file in the project root with the following content:<br/>
 
