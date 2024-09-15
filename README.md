@@ -2,6 +2,9 @@
 
 This project provides a Slack agent that accepts a list of questions and a PDF document, extracts answers from the document using OpenAI LLMs, and posts the results on a specified Slack channel.
 
+# result 
+![Alt text](result.png)
+
 # Features
 Question Answering: Accepts multiple questions, processes the provided PDF, and finds relevant answers.<br/>
 Slack Integration: Automatically posts the extracted answers on Slack.<br/>
