@@ -20,20 +20,41 @@ Slack API token - WebHook Token<br/>
 
 
 # Installation
-Clone the repository:
+Clone the repository:<br/>
 
-git clone <repository_url>
-cd <repository_name>
+git clone <repository_url><br/>
+cd <repository_name><br/>
 
 # Install dependencies:
-pip install -r requirements.txt
+pip install -r requirements.txt<br/>
 
-Set up environment variables: Create a .env file in the project root with the following content:
+Set up environment variables: Create a .env file in the project root with the following content:<br/>
 
-OPENAI_API_KEY=<your_openai_api_key>
-SLACK_API_TOKEN=<your_slack_token>
+OPENAI_API_KEY=<your_openai_api_key><br/>
+SLACK_API_TOKEN=<your_slack_token><br/>
 
 # Run the FastAPI app:
 
-uvicorn main:app --reload
-API Endpoints
+uvicorn main:app --reload<br/>
+
+# API Endpoints
+
+1. POST /invoke_agent
+This endpoint triggers the agent to process the provided questions and PDF file, then posts the extracted answers on Slack.
+
+Request Body:
+json
+{
+  "questions": ["Question 1", "Question 2", "Question 3"],
+  "pdf_path": "path_to_your_pdf_document.pdf"
+}
+
+Example:
+
+curl -X 'POST' \
+  'http://127.0.0.1:8000/invoke_agent' \
+  -H 'Content-Type: application/json' \
+  -d '{
+  "questions": ["Who is the CEO?", "What is the company's policy on vacation?"],
+  "pdf_path": "/path/to/document.pdf"
+}'
