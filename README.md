@@ -51,6 +51,4 @@ curl --location 'http://127.0.0.1:8000/invoke_agent' \
                   "What is the name of the company?", 
                   "What is their vacation policy?", 
                   "What is the termination policy?"],
- "pdf_path": "handbook.pdf"
-                  
-                  }'
+ "pdf_path": "handbook.pdf"}'
