@@ -35,21 +35,21 @@ SLACK_API_TOKEN=<your_slack_token><br/>
 
 # Run the FastAPI app:
 
-uvicorn main:app --reload<br/>
+fastapi dev main.py<br/>
 
 # API Endpoints
 
-1. POST /invoke_agent
-This endpoint triggers the agent to process the provided questions and PDF file, then posts the extracted answers on Slack.
+POST method /invoke_agent<br/>
+This endpoint triggers the agent to process the provided questions and PDF file, then posts the extracted answers on Slack.<br/>
 
-Request Body:
-json
+Request Body:<br/>
+json<br/>
 {
   "questions": ["Question 1", "Question 2", "Question 3"],
   "pdf_path": "path_to_your_pdf_document.pdf"
 }
 
-Example:
+Example:<br/>
 
 curl -X 'POST' \
   'http://127.0.0.1:8000/invoke_agent' \
