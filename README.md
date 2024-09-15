@@ -52,3 +52,18 @@ curl --location 'http://127.0.0.1:8000/invoke_agent' \
                   "What is their vacation policy?", 
                   "What is the termination policy?"],
  "pdf_path": "handbook.pdf"}'
+
+
+# How It Works
+
+Initialize Setup: <br/>
+The FastAPI app initializes a custom setup using the initialise_setup function from utils.py. This sets up the model, vector database and tools required for processing.<br/>
+
+PDF Processing: <br/>
+The PDF document is loaded and split into smaller chunks for efficient processing. The text is cleaned and stored in a Chroma vector database for fast retrieval of relevant sections.<br/>
+
+Question Answering:<br/>
+The agent combines a custom LLM prompt with the list of questions. It extracts answers from the PDF using vector embeddings stored in the Chroma DB.<br/>
+
+Slack Posting:<br/>
+Once answers are retrieved, they are posted on the specified Slack channel.<br/>
