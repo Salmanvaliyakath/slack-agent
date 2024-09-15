@@ -39,22 +39,18 @@ fastapi dev main.py<br/>
 
 # API Endpoints
 
-POST method /invoke_agent<br/>
+POST method http://127.0.0.1:8000/invoke_agent<br/>
 This endpoint triggers the agent to process the provided questions and PDF file, then posts the extracted answers on Slack.<br/>
 
 Request Body:<br/>
-json<br/>
-{
-  "questions": ["Question 1", "Question 2", "Question 3"],
-  "pdf_path": "path_to_your_pdf_document.pdf"
-}
+Example: <br/>
 
-Example:<br/>
-
-curl -X 'POST' \
-  'http://127.0.0.1:8000/invoke_agent' \
-  -H 'Content-Type: application/json' \
-  -d '{
-  "questions": ["Who is the CEO?", "What is the company's policy on vacation?"],
-  "pdf_path": "/path/to/document.pdf"
-}'
+curl --location 'http://127.0.0.1:8000/invoke_agent' \
+--header 'Content-Type: application/json' \
+--data '{"questions" : ["who is the ceo of the comapny?",
+                  "What is the name of the company?", 
+                  "What is their vacation policy?", 
+                  "What is the termination policy?"],
+ "pdf_path": "handbook.pdf"
+                  
+                  }'
